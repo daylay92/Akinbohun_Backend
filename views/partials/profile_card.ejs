@@ -1,0 +1,115 @@
+<div class="col sqs-col-profile-card">
+  <div class="sqs-block image-block sqs-block-image" data-aspect-ratio="136.28691983122363" data-block-type="5" id="block-1f47fbbe7cae8fdeba8c">
+    <div class="sqs-block-content">
+      <div class="image-block-outer-wrapper layout-caption-below design-layout-inline" data-test="image-block-inline-outer-wrapper">
+        <noscript>
+          <img class="picture" src="<%= image %>" alt="<%= image %>" />
+        </noscript>
+        <a href="<%= url %>">
+          <img class="thumb-image profile-card-photo" data-src="<%= image %>" data-image="<%= image %>" data-image-dimensions="" data-image-focal-point="0.5,0.5" alt="<%= image %>" data-load="false" data-image-id="60ba7def6ab3a1722eeb654b" data-type="image" />
+        </a>
+      </div>
+    </div>
+  </div>
+  <% if(["INFP", "INFJ", "ENFP", "ENFJ"].includes(mbti)) { %>
+    <a href="<%= url %>">
+      <div class="profile-card" style="background-color: rgba(222, 237, 230, 0.5)">
+        <div class="center" style="height: 22.5%">
+          <p class="profile-card-name">
+            <%= name %>
+          </p>
+        </div>
+        <div class="center" style="height: 22.5%">
+          <p class="profile-card-job">
+            <%= subcategory %>
+          </p>
+        </div>
+        <div class="center" style="height: 35%">
+          <p class="profile-card-mbti" style="color: #42e298">
+            <%= mbti %>
+          </p>
+        </div>
+        <div class="center" style="height: 20%">
+          <p class="profile-card-enneagram">
+            <%= enneagram %>
+          </p>
+        </div>
+      </div>
+    </a>
+  <% } else if(["INTP", "INTJ", "ENTP", "ENTJ"].includes(mbti)) { %>
+    <a href="<%= url %>">
+      <div class="profile-card" style="background-color: rgba(239, 227, 234, 0.5)">
+        <div class="center" style="height: 22.5%">
+          <p class="profile-card-name">
+            <%= name %>
+          </p>
+        </div>
+        <div class="center" style="height: 22.5%">
+          <p class="profile-card-job">
+            <%= subcategory %>
+          </p>
+        </div>
+        <div class="center" style="height: 35%">
+          <p class="profile-card-mbti" style="color: #ff6479">
+            <%= mbti %>
+          </p>
+        </div>
+        <div class="center" style="height: 20%">
+          <p class="profile-card-enneagram">
+            <%= enneagram %>
+          </p>
+        </div>
+      </div>
+    </a>
+  <% } else if(["ISTP", "ISFP", "ESTP", "ESFP"].includes(mbti)) { %>
+    <a href="<%= url %>">
+      <div class="profile-card" style="background-color: rgba(244, 231, 206, 0.5)">
+        <div class="center" style="height: 22.5%">
+          <p class="profile-card-name">
+            <%= name %>
+          </p>
+        </div>
+        <div class="center" style="height: 22.5%">
+          <p class="profile-card-job">
+            <%= subcategory %>
+          </p>
+        </div>
+        <div class="center" style="height: 35%">
+          <p class="profile-card-mbti" style="color: #ffc657">
+            <%= mbti %>
+          </p>
+        </div>
+        <div class="center" style="height: 20%">
+          <p class="profile-card-enneagram">
+            <%= enneagram %>
+          </p>
+        </div>
+      </div>
+    </a>
+  <% } else { %>
+    <a href="<%= url %>">
+      <div class="profile-card" style="background-color: rgba(210, 229, 230, 0.5)">
+        <div class="center" style="height: 22.5%">
+          <p class="profile-card-name">
+            <%= name %>
+          </p>
+        </div>
+        <div class="center" style="height: 22.5%">
+          <p class="profile-card-job">
+            <%= subcategory %>
+          </p>
+        </div>
+        <div class="center" style="height: 35%">
+          <p class="profile-card-mbti" style="color: #1c858a">
+            <%= mbti %>
+          </p>
+        </div>
+        <div class="center" style="height: 20%">
+          <p class="profile-card-enneagram">
+            <%= enneagram %>
+          </p>
+        </div>
+      </div>
+    </a>
+  <% } %>
+</div>
