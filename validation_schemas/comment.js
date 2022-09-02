@@ -39,7 +39,11 @@ exports.createCommentSchema = Joi.object({
     'any.required': `A valid id of the profile is required`,
     'number.base': `The profileId parameter must be a number`
   })
-}).or('mbti', 'ennegram', 'zodiac', 'title', 'description');
+})
+  .or('mbti', 'ennegram', 'zodiac', 'title', 'description')
+  .messages({
+    'object.missing': 'One of mbti, ennegram, zodiac, title, description must be provided'
+  });
 
 const commentSortByValues = Object.values(constants.commentSortByField);
 exports.getCommentsSchema = Joi.object({

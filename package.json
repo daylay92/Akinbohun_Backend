@@ -4,13 +4,14 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node ./app"
+    "start": "node ./app",
+    "test": "NODE_ENV=test node ./node_modules/mocha/bin/mocha --recursive test/**/*.test.js --timeout 12000 --exit"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@faker-js/faker": "^7.5.0",
     "cors": "^2.8.5",
     "dotenv": "^16.0.2",
     "ejs": "^3.1.6",
@@ -18,5 +19,11 @@
     "joi": "^17.6.0",
     "mongodb-memory-server": "^8.9.1",
     "mongoose": "^6.5.4"
+  },
+  "devDependencies": {
+    "@types/mocha": "^9.1.1",
+    "chai": "^4.3.6",
+    "mocha": "^10.0.0",
+    "supertest": "^6.2.4"
   }
 }
